@@ -29,7 +29,7 @@ jobs:
         application_name: "quantumsafe-encryption-tool"
         environment_name: "quantumsafe-encryption-tool"
         version_label: ${{ github.sha }}
-        region: "eu-north-1"
+        region: eu-north-1
         deployment_package: "./app.zip"
       env:
         AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
