@@ -20,18 +20,6 @@ jobs:
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
         aws-region: eu-north-1
 
-    - name: Debug Secrets
-      run: |
-        if [ -z "${{ secrets.AWS_ACCESS_KEY_ID }}" ]; then
-          echo "AWS_ACCESS_KEY_ID is not set!";
-          exit 1;
-        fi
-        if [ -z "${{ secrets.AWS_SECRET_ACCESS_KEY }}" ]; then
-          echo "AWS_SECRET_ACCESS_KEY is not set!";
-          exit 1;
-        fi
-        echo "AWS secrets are set correctly."
-
     - name: Zip application files
       run: zip -r app.zip .
 
